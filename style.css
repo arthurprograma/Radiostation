@@ -1,0 +1,47 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* Estilo do botão */
+#play-button {
+  width: 100px;
+  height: 100px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Audio-play.svg/1200px-Audio-play.svg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+}
+
+#play-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}

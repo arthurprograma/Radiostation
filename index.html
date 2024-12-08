@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Musical</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bem-vindo ao Meu Site!</h1>
+    <p>Clique no botão abaixo para tocar a música em loop.</p>
+    <!-- Botão de Play -->
+    <button id="play-button"></button>
+  </div>
+
+  <!-- Player de Música -->
+  <audio id="background-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Seu navegador não suporta a reprodução de áudio.
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const music = document.getElementById('background-music');
+      const playButton = document.getElementById('play-button');
+
+      // Adiciona evento de clique no botão para tocar a música
+      playButton.addEventListener('click', () => {
+        music.play().catch((error) => {
+          console.error("Erro ao reproduzir áudio:", error);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
